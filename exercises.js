@@ -66,6 +66,14 @@ var fooModule = (function(){
         return scores[scores.length - 1];
     }
 
+    function higherScores(){
+        let higherScores = [];
+        for (i = 0; i < scores.length; i++) {
+            higherScores.push(scores[i] * 1.05);
+        }
+        return higherScores;
+    }
+
     return {
         sum: sum,
         avg: avg,
@@ -74,38 +82,17 @@ var fooModule = (function(){
         random: random,
         highScores: highScores,
         firstScore: firstScore,
-        lastScore: lastScore
+        lastScore: lastScore,
+        higherScores: higherScores
     };
 })();
-console.log(fooModule.sum());
-console.log(fooModule.avg());
-console.log(fooModule.highest());
-console.log(fooModule.lowest());
-console.log(fooModule.random());
-console.log(fooModule.highScores());
-console.log(fooModule.firstScore());
-console.log(fooModule.lastScore());
 
-// function calculatorModule(){
-//     let calculator = {};
-//     let memory = 0;
-//     let total = 0;
-
-//     calculator.validation = function(number){
-//         if (typeof number !== 'number'){
-//             throw 'Error';
-//         }
-//     };
-
-//     calculator.load = function(number){
-//         this.validation(number);
-//         total = number;
-//         return total;
-//     };
-
-//     calculator.getTotal = function(){
-//         return total;
-//     };
-
-//     return calculator;
-// };
+// console.log(fooModule.sum());
+// console.log(fooModule.avg());
+// console.log(fooModule.highest());
+// console.log(fooModule.lowest());
+// console.log(fooModule.random());
+// console.log(fooModule.highScores());
+// console.log(fooModule.firstScore());
+// console.log(fooModule.lastScore());
+console.log(fooModule.higherScores());
