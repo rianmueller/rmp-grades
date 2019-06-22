@@ -74,6 +74,16 @@ var fooModule = (function(){
         return higherScores;
     }
 
+    function oddScores(){
+        let oddScores = [];
+        for (i = 0; i < scores.length; i++) {
+            if (scores[i] % 2 === 1) {
+                oddScores.push(scores[i]);
+            }
+        }
+        return oddScores;
+    }
+
     return {
         sum: sum,
         avg: avg,
@@ -83,7 +93,8 @@ var fooModule = (function(){
         highScores: highScores,
         firstScore: firstScore,
         lastScore: lastScore,
-        higherScores: higherScores
+        higherScores: higherScores,
+        oddScores: oddScores
     };
 })();
 
@@ -95,4 +106,5 @@ var fooModule = (function(){
 // console.log(fooModule.highScores());
 // console.log(fooModule.firstScore());
 // console.log(fooModule.lastScore());
-console.log(fooModule.higherScores());
+// console.log(fooModule.higherScores());
+console.log(fooModule.oddScores());
