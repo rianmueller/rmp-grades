@@ -38,25 +38,23 @@ var fooModule = (function(){
 
     function highest(){
         return Math.max.apply(Math, scores);;
-        //return highest;
+    }
+
+    function lowest(){
+        return Math.min.apply(Math, scores);
     }
 
     return {
         sum: sum,
         avg: avg,
-        highest: highest
+        highest: highest,
+        lowest: lowest
     };
 })();
 console.log(fooModule.sum());
 console.log(fooModule.avg());
 console.log(fooModule.highest());
-
-
-
-
-    // function lowest(){
-    //     return Math.min(scores);
-    // }
+console.log(fooModule.lowest());
 
     // function random(){
     //     return Math.floor(Math.random() * scores.length);
