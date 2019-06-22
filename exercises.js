@@ -48,12 +48,23 @@ var fooModule = (function(){
         return scores[~~(Math.random() * scores.length)];
     }
 
+    function highScores(){
+        let highScores = 0;
+        for (i = 0; i < scores.length; i++) {
+            if (scores[i] > 70){
+                highScores++;
+            }
+        }
+        return highScores;
+    }
+
     return {
         sum: sum,
         avg: avg,
         highest: highest,
         lowest: lowest,
-        random: random
+        random: random,
+        highScores: highScores
     };
 })();
 console.log(fooModule.sum());
@@ -61,8 +72,7 @@ console.log(fooModule.avg());
 console.log(fooModule.highest());
 console.log(fooModule.lowest());
 console.log(fooModule.random());
-
-
+console.log(fooModule.highScores());
 
 
 // function calculatorModule(){
