@@ -26,24 +26,33 @@ var fooModule = (function(){
         return total;
     }
 
+    function avg(){
+        let total = 0;
+        let avg;
+        for (i = 0; i < scores.length; i++) {
+            total = total + scores[i];
+            avg = total / (scores.length + 1);
+        }
+        return avg;
+    }
+
+    function highest(){
+        return Math.max.apply(Math, scores);;
+        //return highest;
+    }
+
     return {
-        sum: sum
+        sum: sum,
+        avg: avg,
+        highest: highest
     };
 })();
+console.log(fooModule.sum());
+console.log(fooModule.avg());
+console.log(fooModule.highest());
 
-    // function avg(){
-    //     let total = 0;
-    //     let avg;
-    //     for (i = 0; i < scores.length; i++) {
-    //         total = total + scores[i];
-    //         avg = total / (scores.length + 1);
-    //     }
-    //     return avg;
-    // }
 
-    // function highest(){
-    //     return Math.max(scores);
-    // }
+
 
     // function lowest(){
     //     return Math.min(scores);
