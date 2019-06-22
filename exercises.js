@@ -44,21 +44,24 @@ var fooModule = (function(){
         return Math.min.apply(Math, scores);
     }
 
+    function random(){
+        return scores[~~(Math.random() * scores.length)];
+    }
+
     return {
         sum: sum,
         avg: avg,
         highest: highest,
-        lowest: lowest
+        lowest: lowest,
+        random: random
     };
 })();
 console.log(fooModule.sum());
 console.log(fooModule.avg());
 console.log(fooModule.highest());
 console.log(fooModule.lowest());
+console.log(fooModule.random());
 
-    // function random(){
-    //     return Math.floor(Math.random() * scores.length);
-    // }
 
 
 
