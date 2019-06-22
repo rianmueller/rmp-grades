@@ -28,11 +28,10 @@ var fooModule = (function(){
 
     function avg(){
         let total = 0;
-        let avg;
         for (i = 0; i < scores.length; i++) {
             total = total + scores[i];
-            avg = total / (scores.length + 1);
         }
+        let avg = total / (scores.length + 1);
         return avg;
     }
 
@@ -99,7 +98,7 @@ var fooModule = (function(){
 })();
 
 // console.log(fooModule.sum());
-// console.log(fooModule.avg());
+console.log(fooModule.avg());
 // console.log(fooModule.highest());
 // console.log(fooModule.lowest());
 // console.log(fooModule.random());
@@ -107,4 +106,4 @@ var fooModule = (function(){
 // console.log(fooModule.firstScore());
 // console.log(fooModule.lastScore());
 // console.log(fooModule.higherScores());
-console.log(fooModule.oddScores());
+// console.log(fooModule.oddScores());
